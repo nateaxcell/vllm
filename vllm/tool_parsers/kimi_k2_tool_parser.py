@@ -43,7 +43,7 @@ class KimiK2ToolParser(ToolParser):
         # + safety margin for unicode + partial overlap. Prevents unbounded growth.
         self.buffer_max_size: int = 1024
         self.section_char_count: int = 0  # Track characters processed in tool section
-        self.max_section_chars: int = 8192  # Force exit if section exceeds this
+        self.max_section_chars: int = 32700  # Force exit if section exceeds this
         self._buffer_overflow_logged: bool = False  # Log overflow once per session
 
         # Support both singular and plural variants
